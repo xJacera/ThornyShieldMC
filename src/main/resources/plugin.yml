@@ -1,0 +1,16 @@
+name: ThornyShieldMC
+version: 1.0.0
+main: com.xjacera.thornyshield.ThornyShieldPlugin
+api-version: "26.2"
+
+author: xJacera
+description: Enables Thorns to activate while blocking with specially created Thorns shields.
+
+commands:
+  thornyshield:
+    description: Reload ThornyShield configuration.
+    permission: thornyshield.reload
+
+permissions:
+  thornyshield.reload:
+    default: op
