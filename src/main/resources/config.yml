@@ -1,0 +1,16 @@
+enabled: true
+
+chance:
+  vanilla: true
+  multiplier: 1.0
+
+damage:
+  vanilla: true
+  multiplier: 1.0
+
+effects:
+  particles: true
+  sound: true
+
+shield:
+  durability: true
