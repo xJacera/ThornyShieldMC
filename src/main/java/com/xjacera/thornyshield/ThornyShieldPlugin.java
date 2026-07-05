@@ -1,5 +1,6 @@
 package com.xjacera.thornyshield;
 
+import com.xjacera.thornyshield.listener.ShieldListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class ThornyShieldPlugin extends JavaPlugin {
@@ -13,17 +14,16 @@ public final class ThornyShieldPlugin extends JavaPlugin {
 
         saveDefaultConfig();
 
+        getServer().getPluginManager().registerEvents(new ShieldListener(), this);
+
         getLogger().info("================================");
         getLogger().info(" ThornyShieldMC Enabled");
         getLogger().info("================================");
-
     }
 
     @Override
     public void onDisable() {
-
         getLogger().info("ThornyShieldMC Disabled");
-
     }
 
     public static ThornyShieldPlugin getInstance() {
