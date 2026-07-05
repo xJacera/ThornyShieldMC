@@ -1,0 +1,30 @@
+name: Build Plugin
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Build
+        run: mvn clean package
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ThornyShieldMC
+          path: target/*.jar
